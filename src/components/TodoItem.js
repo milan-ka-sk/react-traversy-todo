@@ -12,13 +12,18 @@ export class TodoItem extends Component {
         }
     }
 
-  render() {
-    return (
-      <div style={this.getStyle()}>
-        {this.props.todo.title}
-      </div>
-    )
-  }
+    render() {
+
+        const {id, title} = this.props.todo;
+
+        return (
+        <div style={this.getStyle()}>
+            <input type="checkbox" onChange={this.props.markComplete.bind(this, id)}/>
+            {/* <input type="checkbox" onChange={() => {this.props.markComplete(id)}} /> */}
+            {title}
+        </div>
+        )
+    }
 }
 
 // prop types ... good practice]
