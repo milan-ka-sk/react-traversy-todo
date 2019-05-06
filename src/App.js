@@ -46,11 +46,22 @@ class App extends Component {
         });
     }
 
+    addTodo = (title) => {
+      const newTodo = {
+        id: Date.now(), // workaround
+        title: title,
+        completed: false
+      }
+      this.setState({
+        todos: [...this.state.todos, newTodo]
+      });
+    }
+
     render() {
         return ( 
         <div className = "App" >
             <Header / >
-            <AddTodo />
+            <AddTodo addTodo={this.addTodo} />
             <Todos todos = { this.state.todos }
             markComplete = { this.markComplete }
             deleteTodo = { this.deleteTodo }
