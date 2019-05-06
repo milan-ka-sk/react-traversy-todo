@@ -12,7 +12,7 @@ export class TodoItem extends Component {
 }
 
 // prop types ... good practice]
-TodoItem.PropTypes = {
+TodoItem.propTypes = {
     todo: PropTypes.object.isRequired
 }
 

@@ -14,7 +14,7 @@ class Todos extends Component {
 }
 
 // prop types ... good practice]
-Todos.PropTypes = {
+Todos.propTypes = {
     todos: PropTypes.array.isRequired
 }
 
